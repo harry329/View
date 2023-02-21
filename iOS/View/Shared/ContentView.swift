@@ -9,17 +9,11 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        HStack{
-            Image("Remix").clipShape(Circle()).frame(width: 80, height: 80, alignment: .topLeading)
             VStack(alignment: .leading) {
                 ZStack(alignment: .topLeading) {
-                     Text("Hello Harry")
-                }
-                ZStack(alignment: .topLeading) {
-                     Text("How are you doing?")
+                     Text("Hello From Swift UI")
                 }
             }
-        }
     }
 }
 

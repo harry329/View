@@ -15,20 +15,18 @@ import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.style.TextAlign
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import androidx.core.content.ContextCompat.startActivity
 import com.example.viewcompose.ui.theme.ViewComposeTheme
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 import network.QuotesApi
 import network.RetrofitHelper
-import java.lang.reflect.Modifier
-import java.nio.file.Files.size
+
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -37,7 +35,13 @@ class MainActivity : ComponentActivity() {
             ViewComposeTheme {
                 // A surface container using the 'background' color from the theme
                 Surface(color = MaterialTheme.colors.background) {
-                    MessagingTile("Android", this)
+                    Column (
+                        modifier = androidx.compose.ui.Modifier.fillMaxSize(),
+                        verticalArrangement  = Arrangement.Center,
+                        horizontalAlignment = Alignment.CenterHorizontally,
+                            ) {
+                        Text("Hello From Android Compose")
+                    }
                 }
             }
         }

@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const CenterText(title: 'Hello Flutter'),
+      home: const CenterText(title: 'Hello From Flutter'),
     );
   }
 }
@@ -26,18 +26,7 @@ class CenterText extends StatelessWidget {
     return Container(
       color: const Color.fromARGB(255, 255, 255, 255),
       child: Center(
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text(
-              title,
-              style: const TextStyle(
-                fontSize: 12,
-                color: Color.fromARGB(255, 0, 0, 0),
-                backgroundColor: Color.fromARGB(255, 255, 255, 255),
-              ),
-            ),
-            Spacer(),
+        child:
             Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -49,18 +38,8 @@ class CenterText extends StatelessWidget {
                     backgroundColor: Color.fromARGB(255, 255, 255, 255),
                   ),
                 ),
-                Text(
-                  title,
-                  style: const TextStyle(
-                    fontSize: 12,
-                    color: Color.fromARGB(255, 0, 0, 0),
-                    backgroundColor: Color.fromARGB(255, 255, 255, 255),
-                  ),
-                ),
               ],
             )
-          ],
-        )
       ),
     );
   }
